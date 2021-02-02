@@ -21,7 +21,7 @@ product!: Product;
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
-      this.product = this.productsService.getProduct(id)!;
+      //this.product = this.productsService.getProduct(id)!;
     })
   }
 
