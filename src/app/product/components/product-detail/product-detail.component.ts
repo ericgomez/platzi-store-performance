@@ -33,4 +33,18 @@ product!: Product;
     })
   }
 
+  createProduct() {
+    const newProduct: Product = {
+      id: '222',
+      title: 'Angular',
+      image: 'assets/images/camiseta.png',
+      price: 3000,
+      description: 'blabla blabla blabla'
+    };
+    this.productsService.createProduct(newProduct)
+    .subscribe(product => {
+      console.log(product);
+    })
+  }
+
 }
