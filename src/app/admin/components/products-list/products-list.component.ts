@@ -15,6 +15,7 @@ export class ProductsListComponent implements OnInit {
   constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
+    this.fetchProducts();
   }
 
   fetchProducts() {
@@ -22,5 +23,12 @@ export class ProductsListComponent implements OnInit {
       .subscribe(products => {
         this.products = products;
       })
+  }
+
+  deleteProduct(id: string) {
+    this.productsService.deleteProduct(id)
+    .subscribe(rta => {
+      this.fetchProducts();
+    })
   }
 }
