@@ -15,7 +15,12 @@
       <div class="row">
         <div class="col-xs">
           <mat-form-field>
-            <input placeholder="Title" formControlName="title" matInput type="text" />
+            <input
+              placeholder="Title"
+              formControlName="title"
+              matInput
+              type="text"
+            />
           </mat-form-field>
         </div>
       </div>
@@ -23,21 +28,37 @@
       <div class="row">
         <div class="col-xs">
           <mat-form-field>
-            <input placeholder="Price" formControlName="price" matInput type="number" />
+            <input
+              placeholder="Price"
+              formControlName="price"
+              matInput
+              type="number"
+            />
           </mat-form-field>
+          <div *ngIf="hasErrorPrice">
+            <p *ngIf="hasErrorPriceInvalid">No te debes pasar de 10000</p>
+            <p *ngIf="hasErrorPriceRequired">El campo es requerido</p>
+          </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs">
           <mat-form-field>
-            <textarea placeholder="Description" formControlName="description" matInput type="text"></textarea>
+            <textarea
+              placeholder="Description"
+              formControlName="description"
+              matInput
+              type="text"
+            ></textarea>
           </mat-form-field>
         </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button type="submit">Guardar</button>
+      <button [disabled]="form.invalid" mat-raised-button type="submit">
+        Guardar
+      </button>
     </mat-card-actions>
   </mat-card>
 </form>
