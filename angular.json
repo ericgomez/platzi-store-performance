@@ -157,6 +157,10 @@
               "devServerTarget": "platzi-store-complete:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

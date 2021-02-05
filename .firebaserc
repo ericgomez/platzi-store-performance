@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "platzi-store-cef51": {
+      "hosting": {
+        "platzi-store-complete": [
+          "platzi-store-cef51"
+        ]
+      }
+    }
+  }
+}

@@ -4,7 +4,15 @@
 
 export const environment = {
   production: false,
-  url_api: 'https://platzi-store.herokuapp.com'
+  url_api: 'https://platzi-store.herokuapp.com',
+  firebaseConfig: {
+    apiKey: 'AIzaSyBK8FSHZKizXLudhxMQvIvFKse7_P-6SUg',
+    authDomain: 'platzi-store-cef51.firebaseapp.com',
+    projectId: 'platzi-store-cef51',
+    storageBucket: 'platzi-store-cef51.appspot.com',
+    messagingSenderId: '425721933284',
+    appId: '1:425721933284:web:a5a003f72e436edfa2ebf1'
+  }
 };
 
 /*
