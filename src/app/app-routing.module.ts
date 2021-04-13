@@ -4,6 +4,8 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component'
 import { PreloadService } from './core/services/preload.service'
 
+import { QuicklinkStrategy } from 'ngx-quicklink';
+
 import { AdminGuard } from './admin.guard'
 
 const routes: Routes = [
@@ -57,7 +59,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadService // En vez de utilizar PreloadAllModules implementamos nuestra propia estrategia: PreloadService 
+    preloadingStrategy: QuicklinkStrategy // En vez de utilizar PreloadAllModules implementamos nuestra propia estrategia: PreloadService 
   })],
   exports: [RouterModule]
 })
