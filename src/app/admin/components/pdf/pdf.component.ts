@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { jsPDF } from 'jspdf';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-pdf',
@@ -15,9 +14,11 @@ export class PdfComponent implements OnInit {
   }
 
   generatePdf() {
-    const doc = new jsPDF();
-    doc.text('Hello world!', 10, 10);
-    doc.save('a4.pdf');
+    // const doc = new jsPDF();
+    // doc.text('Hello world!', 10, 10);
+    // doc.save('a4.pdf');
+
+    // Codigo HTTP que generara un servicio Backend que genere el PDF
   }
 
 }
