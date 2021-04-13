@@ -60,7 +60,9 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     preloadingStrategy: QuicklinkStrategy // En vez de utilizar PreloadAllModules implementamos nuestra propia estrategia: PreloadService 
-  })],
+    ,
+    initialNavigation: 'enabled'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
