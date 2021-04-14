@@ -1,27 +1,17 @@
-# PlatziStoreComplete
+# Platzi Store Performance
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+## Platzi Shop
 
-## Development server
+Usando los nuevos features de Angular 11, optimiza todas las funciones de Platzi Shop hasta llevar el proyecto a producción.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Capturas
 
-## Code scaffolding
+![Capturas](https://static.platzi.com/media/landing-projects/proyecto-angular-profesional.gif)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Conceptos Clave
+- Analizando el tamaño del Bundle
+- Aumenta la velocidad de navegación
+- Rendimiento en tiempo de ejecución
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
