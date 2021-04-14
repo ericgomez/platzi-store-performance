@@ -7,6 +7,8 @@ import { Observable, Subscription } from 'rxjs';
 // Array con nombres para alimentar la generacion aleatoria de informacion
 const names = ['nicolas', 'juan', 'felipe', 'maria'];
 
+import { tap } from 'rxjs/operators'
+
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
@@ -18,14 +20,20 @@ export class LayoutComponent implements OnInit, OnDestroy {
   salesList: EmployeeData[] = [];
   buyList: EmployeeData[] = [];
 
-  value!: number;
+  value$!: Observable<number>;
 
   // Variable para guardando la suscription actual
-  sub$!: Subscription;
+  //sub$!: Subscription;
 
   constructor(
     private generatorService: GeneratorService
-    ) { }
+    ) { 
+      this.value$ = this.generatorService.geData()
+        .pipe(
+          // Tap permite interceptar cualquier valor de nuestro Observable
+          tap(num => console.log(num))
+        );
+    }
 
   ngOnInit(): void {
     // Llenamos la lista con onformacion alatoria
@@ -33,18 +41,18 @@ export class LayoutComponent implements OnInit, OnDestroy {
     this.buyList = this.generatorService.generate(names, [10, 20], 10);
 
     //Guardamos la suscription
-    this.sub$ = this.generatorService.geData()
-      .subscribe(value => {
-        this.value = value;
-        console.log(this.value);
-      });
+    // this.sub$ = this.generatorService.geData()
+    //  .subscribe(value => {
+    //    this.value = value;
+    //    console.log(this.value);
+    //  });
   }
 
   //Ciclo de vida: cuando se destruye
   ngOnDestroy(): void {
     console.log('destroy');
     // Nos desuscribimos
-    this.sub$.unsubscribe();
+    // this.sub$.unsubscribe();
   }
 
   // Obtenemo el valor que recibimo desde el input en el browser
